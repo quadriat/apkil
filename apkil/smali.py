@@ -497,7 +497,6 @@ class MethodNode(object):
         if self.registers > 0:
             self.buf.insert(0, ".registers %d" % self.registers)
         elif (not "abstract" in self.access) and \
-                (not "final" in self.access) and \
                 (not "native" in self.access):
             self.buf.insert(0, ".registers 0")
         self.buf.insert(0, ".method %s %s" % \
